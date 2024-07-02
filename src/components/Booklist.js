@@ -5,24 +5,26 @@ const author = 'Freida McFadden'
 const title = 'The Housemaid Is Watching'
 const img = './images/book-1.jpg'
 
-function Booklist() {
+const Booklist = () => {
   return (
     <section className='booklist'>
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
+      <Book author={author} title={title} img={img} />
+      <Book author={author} title={title} img={img} />
+      <Book title='random title' number={22} />
     </section>
   )
 }
 
-const Book = () => {
+const Book = (props) => {
+    console.log(props)
   return (
     <article className='book'>
-      <img src={img} alt='The Housemaid Is Watching' />
+      <img src={img} alt={title} />
       <h2>{title}</h2>
       <h4>{author}</h4>
+      {/* <p>{props.job}</p>
+      <p>{props.title}</p>
+      <p>{props.number}</p> */}
     </article>
   )
 }
