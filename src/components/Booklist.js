@@ -1,6 +1,10 @@
 import React from 'react'
 import './Booklist.css'
 
+const author = 'Freida McFadden'
+const title = 'The Housemaid Is Watching'
+const img = './images/book-1.jpg'
+
 function Booklist() {
   return (
     <section className='booklist'>
@@ -16,33 +20,11 @@ function Booklist() {
 const Book = () => {
   return (
     <article className='book'>
-      <Image />
-      <Title />
-      <Author />
+      <img src={img} alt='The Housemaid Is Watching' />
+      <h2>{title}</h2>
+      <h4>{author}</h4>
     </article>
   )
 }
-
-const Image = () => (
-  <img src='./images/book-1.jpg' alt='The Housemaid Is Watching' />
-)
-// const Title = () => {
-//     const inlineHeadingStyles = {
-//       color: '#1e12d7',
-//       fontSize: '1.5rem',
-//       marginTop: '0.9rem',
-//       marginBottom: '0.3rem'
-//     }
-//   return <h2 style={inlineHeadingStyles}>The Housemaid Is Watching</h2>
-// }
-const Title = () => {
-    return <h2>The Housemaid Is Watching</h2>
-}
-// const Author = () => (
-// <h4 style={{color: '#617d98', fontSize: '0.75rem', marginTop: '0.5rem'}} >Freida McFadden</h4>
-// )
-const Author = () => (
-  <h4>Freida McFadden</h4>
-)
 
 export default Booklist
