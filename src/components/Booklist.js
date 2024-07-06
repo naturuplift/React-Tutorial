@@ -28,8 +28,12 @@ const Booklist = () => {
 }
 
 const EventExamples = () => {
-  const handleFormInput = () => {
-    console.log('handle form input')
+  const handleFormInput = (event) => {
+    console.log(event)
+    // e.target - element
+    console.log(`Input Name : ${event.target.name}`)
+    console.log(`Input Value : ${event.target.value}`)
+    // console.log('handle form input')
   }
   const handleButtonClick = () => {
     alert('handle button click')
