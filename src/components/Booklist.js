@@ -38,9 +38,13 @@ const EventExamples = () => {
   const handleButtonClick = () => {
     alert('handle button click')
   }
+  const handleFormSubmission = (event) => {
+    event.preventDefault()
+    console.log('form submitted')
+  }
   return (
     <section>
-      <form>
+      <form onSubmit={handleFormSubmission}>
         <h2>Typical Form</h2>
         <input
           type='text'
@@ -56,7 +60,7 @@ const EventExamples = () => {
 
 const Book = (props) => {
   const { img, title, author } = props
-  console.log(props)
+  //   console.log(props)
   return (
     <article className='book'>
       <img src={img} alt={title} />
